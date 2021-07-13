@@ -26,7 +26,7 @@ class Authen extends Component {
     promise.then(user => {
       var lout = document.getElementById('logout');
 
-      //Write a welcome message for user
+      
       lout.classList.remove('hide');
     });
 
@@ -38,8 +38,8 @@ class Authen extends Component {
   }
 
   signup(){
-    const email = this.refs.email.value;
-    const password = this.refs.password.value;
+    const email = this.email.value;
+    const password = this.password.value;
     console.log(email, password);
 
     const auth = firebase.auth();
@@ -67,7 +67,7 @@ class Authen extends Component {
     firebase.auth().signOut();
     var lout = document.getElementById('logout');
 
-    //Write a thanks message for user
+    
     lout.classList.add('hide');
   }
 
